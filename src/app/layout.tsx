@@ -59,7 +59,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={bricolage_grotesque.className}>
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen bg-[#0A0A0A]">{children}</div>
         <Footer />
       </body>
     </html>
