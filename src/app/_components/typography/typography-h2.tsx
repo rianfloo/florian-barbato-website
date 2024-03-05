@@ -8,7 +8,7 @@ export default function TypographyH2({
   className,
   ...rest
 }: ITypographyH2Props) {
-  const baseClasses = "text-6xl font-bold leading-9 text-white";
+  const baseClasses = "text-7xl font-bold text-white leading-none";
   const mergedClasses = cn(baseClasses, className);
 
   return (
