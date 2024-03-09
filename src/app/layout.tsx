@@ -60,7 +60,7 @@ export default function RootLayout({
       </head>
       <body className={bricolage_grotesque.className}>
         <div className="min-h-screen bg-[#0A0A0A]">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
