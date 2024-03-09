@@ -110,7 +110,7 @@ export default function page({}: Props) {
               If you experience any issues or have further questions, please
               contact our support team through the app's "Help" section. We are
               committed to providing timely and helpful assistance or{" "}
-              <a className="underline" href="mailto:contact@florianbarbato.com">
+              <a className="underline" href="mailto:hello@florianbarbato.com">
                 contact us here
               </a>
               .
