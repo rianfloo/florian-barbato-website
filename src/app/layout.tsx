@@ -1,9 +1,9 @@
-import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
-import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
-
 import "./globals.css";
+
+import { Bricolage_Grotesque } from "next/font/google";
+import Footer from "./_components/footer";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
+import type { Metadata } from "next";
 
 const bricolage_grotesque = Bricolage_Grotesque({
   weight: ["400", "600", "700", "800"],
@@ -11,8 +11,8 @@ const bricolage_grotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Florian Barbato - Full-stack developer and designer`,
+  description: `I am a full-stack developer with a focus on Shopify and TypeScript. I am passionate about creating high-quality software and I am always looking to learn new things.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -60,7 +60,7 @@ export default function RootLayout({
       </head>
       <body className={bricolage_grotesque.className}>
         <div className="min-h-screen bg-[#0A0A0A]">{children}</div>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

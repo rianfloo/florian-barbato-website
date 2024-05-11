@@ -6,3 +6,36 @@
   font-family: "Bricolage Grotesque", sans-serif;
   font-optical-sizing: auto;
 }
+
+.grid-card {
+  background: linear-gradient(
+      0deg,
+      rgba(253, 253, 253, 0),
+      rgba(253, 253, 253, 0.02)
+    ),
+    url("../public/assets/grid_square_24px.png"), #0f0f0f;
+  background-blend-mode: overlay;
+  background-blend-mode: overlay;
+  border: 1px solid #252525;
+  border-radius: 8px;
+  isolation: isolate;
+  position: relative;
+  min-height: 200px;
+}
+
+.grid-card-img-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-60%) translateX(-50%);
+}
+
+.grid-card-title-container {
+  position: absolute;
+  background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 0px 0px 7px 8px;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

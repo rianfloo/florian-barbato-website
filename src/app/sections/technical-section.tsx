@@ -1,9 +1,12 @@
 import React, { ComponentPropsWithoutRef } from "react";
-import TypographyH2 from "../_components/typography/typography-h2";
-import { cn } from "tailwind-cn";
-import TypographyLead from "../_components/typography/typography-lead";
+import { RiArtboard2Fill, RiCodeBoxFill } from "@remixicon/react";
+
 import Card from "../_components/card";
-import { RiCodeBoxFill, RiArtboard2Fill } from "@remixicon/react";
+import GridCard from "../_components/card/grid-card";
+import TypographyH2 from "../_components/typography/typography-h2";
+import TypographyLead from "../_components/typography/typography-lead";
+import { cn } from "tailwind-cn";
+import { skillData } from "../data/skills";
 
 interface ITechnicalSectionProps extends ComponentPropsWithoutRef<"section"> {}
 
@@ -15,17 +18,17 @@ export default function TechnicalSection({
   const mergedClasses = cn(baseClasses, className);
   return (
     <section className={mergedClasses} {...rest}>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
         <div>
           <TypographyH2 className="md:w-7/12">
-            Discover my skills and expertise
+            Skills and expertise
           </TypographyH2>
           <TypographyLead className="mt-4 md:max-w-96">
             I am a full-stack developer with a focus on TypeScript. I am
             passionate about creating high-quality software and I am always
             looking to learn new things.
           </TypographyLead>
-          <div className="grid grid-cols-2 gap-8 mt-16">
+          <div className="grid md:grid-cols-2 gap-8 mt-16">
             <Card className="flex flex-col gap-2">
               <RiCodeBoxFill color="#2FF91D" />
               <h3 className="text-white font-bold">Code</h3>
@@ -46,6 +49,14 @@ export default function TechnicalSection({
             </Card>
           </div>
         </div>
+
+        {/* Skills cards */}
+        <div className="grid md:grid-cols-2 border rounded-lg border-[#252525] p-2 gap-2">
+          {skillData.map((skill) => (
+            <GridCard key={skill.title} img={skill.img} title={skill.title} />
+          ))}
+        </div>
+        {/* END skills cards */}
       </div>
     </section>
   );

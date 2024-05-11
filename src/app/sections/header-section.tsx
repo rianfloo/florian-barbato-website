@@ -1,4 +1,5 @@
 import React, { ComponentPropsWithoutRef } from "react";
+
 import TypographyH1 from "../_components/typography/typography-h1";
 import { cn } from "tailwind-cn";
 
@@ -12,9 +13,7 @@ export default function HeaderSection({
   const mergedClasses = cn(baseClasses, className);
   return (
     <section className={mergedClasses} {...rest}>
-      <TypographyH1>
-        Hi, you are currently viewing my WIP Portfolio.
-      </TypographyH1>
+      <TypographyH1>Hi, I am Florian Barbato.</TypographyH1>
     </section>
   );
 }
